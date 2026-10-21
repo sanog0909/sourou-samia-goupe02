@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4A5D23">
+  <meta name="description" content="Espace acheteur SOUROU SAMIA : consultez votre panier, les prix du Maïs, Sorgho, Petit Mil et préparez une visite.">
+  <title>Espace acheteur — SOUROU SAMIA</title>
+  <link rel="icon" href="assets/sourou-samia-embleme.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="SOUROU SAMIA, accueil">
+      <img src="assets/sourou-samia-embleme.png" alt="" width="50" height="50">
+      <span><strong>SOUROU <em>SAMIA</em></strong><small>COOPÉRATIVE CÉRÉALIÈRE</small></span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Ouvrir ou fermer le menu" aria-expanded="false">☰</button>
+
+    <nav id="navigation-principale" class="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="produits.html">Nos céréales</a>
+      <a href="intrants.html">Fiches intrants</a>
+      <a href="apropos.html">À propos</a>
+      <a class="nav-cta" href="acheteurs.html" aria-current="page">
+        Espace acheteur
+        <span class="cart-badge" data-cart-count hidden>0</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section class="page-intro content-wrap buyer-intro">
+      <p class="eyebrow"><span class="eyebrow-rule"></span> ACHETEURS · CONTACT & COMPARAISON</p>
+      <h1>Faire affaire,<br><span>de près.</span></h1>
+      <div class="page-intro-bottom">
+        <p>Repérez les céréales qui vous intéressent, ajoutez-les à votre panier et préparez une demande de rendez-vous pour rencontrer la coopérative.</p>
+        <span class="index-mark">02<br><small>ACHETEURS</small></span>
+      </div>
+    </section>
+
+    <section class="security-note content-wrap" role="note">
+      <span class="note-symbol" aria-hidden="true">i</span>
+      <p><strong>Accès acheteur :</strong> les comptes sécurisés sont administrés par la coopérative. En attendant la mise en service du compte, vous pouvez préparer votre panier sur cet appareil et nous contacter directement.</p>
+    </section>
+
+    <!-- PANIER -->
+    <section class="panier-section content-wrap" id="panier" aria-labelledby="panier-titre">
+      <div class="panier-heading">
+        <div>
+          <p class="eyebrow">VOTRE SÉLECTION · CAMPAGNE 2025/2026</p>
+          <h2 id="panier-titre">Votre <span>panier.</span></h2>
+        </div>
+        <span class="panier-icon" aria-hidden="true">🛒</span>
+      </div>
+      <p class="muted-copy">
+        Les articles ajoutés depuis <a href="produits.html">le catalogue</a> apparaissent ici.
+        Votre panier est conservé sur cet appareil.
+      </p>
+      <div id="panier-contenu" class="panier-contenu">
+        <p class="panier-vide">
+          Votre panier est vide. Parcourez
+          <a href="produits.html">le catalogue</a> pour ajouter des céréales.
+        </p>
+      </div>
+    </section>
+
+    <section class="favorites-section content-wrap" id="favoris" aria-labelledby="favoris-titre">
+      <div class="panier-heading">
+        <div><p class="eyebrow">VOTRE LISTE DE REPÉRAGE</p><h2 id="favoris-titre">Vos <span>favoris.</span></h2></div>
+        <span class="panier-icon" aria-hidden="true">♡</span>
+      </div>
+      <p class="muted-copy">Enregistrez les céréales qui vous intéressent pour les retrouver ici, sans les ajouter nécessairement au panier.</p>
+      <div id="favorites-list" class="favorites-list" aria-live="polite"><p class="favorites-empty">Aucun favori enregistré. Ajoutez un produit depuis le catalogue avec le bouton cœur.</p></div>
+    </section>
+
+    <section class="booking-section" id="rendez-vous">
+      <div class="booking-inner content-wrap">
+        <div class="booking-copy">
+          <p class="eyebrow">ORGANISER UNE RENCONTRE</p>
+          <h2>Voir le grain.<br><span>Confirmer le lot.</span></h2>
+          <p>Indiquez la date souhaitée, le type de visite et le volume envisagé. Votre logiciel de messagerie s'ouvrira avec les informations pré-remplies. Contactez ensuite la coopérative pour confirmer la visite.</p>
+          <div class="booking-stamp">
+            <span aria-hidden="true">↗</span>
+            <span>Une visite aide à vérifier<br>qualité et disponibilité.</span>
+          </div>
+        </div>
+
+        <form class="booking-form form-stack"
+              action="mailto:contact@sourou-samia.bf"
+              method="post"
+              enctype="text/plain">
+          <div class="form-two">
+            <div>
+              <label for="appointment-name">Nom / entreprise</label>
+              <input id="appointment-name" name="Nom" type="text"
+                     autocomplete="organization"
+                     placeholder="Votre entreprise" required>
+            </div>
+            <div>
+              <label for="appointment-date">Date souhaitée</label>
+              <input id="appointment-date" name="Date" type="date" required>
+            </div>
+          </div>
+
+          <label for="visit-type">Type de visite</label>
+          <select id="visit-type" name="Type" required>
+            <option value="">Choisir une visite</option>
+            <option>Visite du stock</option>
+            <option>Échange commercial</option>
+            <option>Contrôle qualité du lot</option>
+            <option>Finalisation d'un achat</option>
+          </select>
+
+          <label for="appointment-cereal">Céréale concernée</label>
+          <select id="appointment-cereal" name="Cereale">
+            <option value="">Sélectionner une céréale</option>
+            <option>Maïs — 210 FCFA/kg</option>
+            <option>Sorgho — 245 FCFA/kg</option>
+            <option>Petit mil Souna 3 — 310 FCFA/kg</option>
+          </select>
+
+          <label for="appointment-quantity">
+            Quantité envisagée <span class="label-hint" id="quantity-hint">(kg)</span>
+          </label>
+          <div class="quantity-field">
+            <input id="appointment-quantity" name="Quantite"
+                   type="number" min="1" step="1"
+                   placeholder="Votre volume en kg"
+                   aria-describedby="quantity-hint" required>
+            <span aria-hidden="true">kg</span>
+          </div>
+
+          <button class="button button-green" type="submit">
+            Envoyer la demande <span aria-hidden="true">→</span>
+          </button>
+
+          <p class="form-footnote">
+            Ce formulaire ouvre votre logiciel de messagerie avec les informations
+            pré-remplies. La coopérative vous répondra pour confirmer le rendez-vous.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="brand brand-footer" href="index.html">
+        <img src="assets/sourou-samia-embleme.png" alt="" width="42" height="42">
+        <span><strong>SOUROU <em>SAMIA</em></strong><small>LA TERRE NOURRIT LE LIEN</small></span>
+      </a>
+      <p>Coopérative Céréalière du Sourou<br>Vallée du Sourou · Burkina Faso</p>
+      <nav aria-label="Navigation de pied de page">
+        <a href="produits.html">Céréales</a>
+        <a href="intrants.html">Intrants</a>
+        <a href="acheteurs.html">Acheteurs</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>La Coopérative Céréalière du Sourou · Burkina Faso</span>
+      <span>© SOUROU SAMIA</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
